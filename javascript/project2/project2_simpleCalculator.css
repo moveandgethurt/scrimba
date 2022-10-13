@@ -1,0 +1,45 @@
+body {
+    font-family: "Comic Sans", sans-serif;
+    font-size: 30px;
+    padding: 20px 0;
+    margin: 0;
+    text-align: center;
+    background: violet;
+}
+
+.container {
+    border: 3px solid black;
+    border-radius: 10px;
+    background: linear-gradient(90deg, rgb(231, 111, 215), rgb(176, 112, 228));
+    padding: 50px 150px 175px 150px;
+    margin: 0 auto;
+    width: 50vw;
+    height: 15vh;
+}
+
+#num1-el, #num2-el {
+    border: 1px solid black;
+    padding: 5px;
+    background: violet;
+}
+
+button {
+    margin: 20px 0;
+    background: rgb(231, 211, 211);
+    color: black;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 5px 8px;
+}
+
+button:hover {
+    background: rgb(255, 192, 255);
+}
+
+button:active {
+    background: rgb(221, 152, 221);
+    transform: scale(0.95);
+}
+
