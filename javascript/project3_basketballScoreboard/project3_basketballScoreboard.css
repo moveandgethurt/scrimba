@@ -1,0 +1,177 @@
+:root {
+    --background: #39166e;
+    --text: #DDD6FE;
+    --button: #A78BFA;
+    --button-active: #8B5CF6;
+    --contrast: #F59E0B;
+    --contrast-active: #D97706;
+    --tabloid: #080001;
+}
+
+@font-face {
+    font-family: "Cursed Timer";
+    src: url(./CursedTimerUlil-Aznm.ttf);
+}
+
+body {
+    margin: 0;
+    background-color: var(--background);
+    cursor: default;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+
+    padding: 68px 85px;
+}
+
+h3 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 36px;
+    color: var(--text);
+    text-align: center;
+}
+
+#home-score, #guest-score {
+    font-family: "Cursed Timer";
+    color: var(--contrast);
+    font-size: 90px;
+    text-align: center;
+}
+
+.score {
+    height: 120px;
+    width: 175px;
+    padding-top: 15px;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    background-color: var(--tabloid);
+    border-radius: 5px;
+}
+
+.plus-buttons {
+    display: grid;
+    align-content: space-around;
+    grid-template-columns: auto auto auto;
+    gap: 20px;
+
+    margin-top: 30px;
+}
+
+#plus-button {
+    box-sizing: border-box;
+    border: 2px solid var(--button);
+    border-radius: 5px;
+
+    font-family: "Cursed Timer";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 155%;
+    text-align: center;
+    color: var(--button);
+
+    height: 45px;
+    width: 45px;
+    background-color: var(--background);
+    padding-top: 5px;
+
+    cursor: pointer;
+}
+
+#plus-button:hover, #leader-button:hover {
+    background-color: var(--button);
+    color: var(--background);
+}
+
+#plus-button:active, #leader-button:active {
+    transform: scale(0.9);
+    background-color: var(--button-active);
+    border-color: var(--button-active);
+}
+
+.new-game-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+#new-game-button {
+    box-sizing: border-box;
+    border-radius: 5px;
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 36px;
+    font-size: 20px;
+    text-align: center;
+
+    height: 50px;
+    width: 200px;
+    padding-bottom: 3px;
+
+    color: var(--contrast);
+    background-color: var(--background);
+    border: 2px solid var(--button);
+
+    cursor: pointer;
+}
+
+#new-game-button:hover {
+    background-color: var(--contrast);
+    color: var(--background);
+    border: none;
+}
+
+#new-game-button:active {
+    transform: scale(0.9);
+    background-color: var(--contrast-active);
+    border: none;
+}
+
+.leader-container {
+    height: 100px;
+    position: relative;
+    top: 100px;
+    width: 300px;
+}
+
+p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 36px;
+    color: var(--text);
+    text-align: center;
+}
+
+#leader-button {
+    box-sizing: border-box;
+    border: 2px solid var(--button);
+    border-radius: 5px;
+
+    font-family: "Cursed Timer";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 155%;
+    text-align: center;
+    color: var(--button);
+
+    height: 40px;
+    width: 160px;
+    background-color: var(--background);
+    padding-top: 5px;
+
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+}
