@@ -22,7 +22,7 @@ input:focus {
 button {
     background-color: #5f9341;
     height: 3em;
-    border: none;
+    border: 1px solid #5f9341;
     color: white;
     width: 10em;
     font-weight: 700;
@@ -38,6 +38,12 @@ button:hover {
 
 button:active {
     background-color: #427525;
+    transform: scale(0.9);
+}
+
+#delete-btn {
+    background-color: white;
+    color: #5f9341;
 }
 
 ul {
