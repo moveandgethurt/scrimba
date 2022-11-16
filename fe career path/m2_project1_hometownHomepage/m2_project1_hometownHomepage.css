@@ -1,0 +1,121 @@
+/**
+Palette: https://scrimba.com/links/hometown-palette
+YELLOW: #FF9E00
+BROWN: #7a453f
+LIGHT BLUE: #83b8d7
+DARK BLUE: #2d3f4d
+GRAYISH: #7b6e7f
+
+*/
+
+@font-face {
+    src: url("./kharkiv-tone.ttf");
+    font-family: "Kharkiv Tone";
+}
+
+body {
+    margin: 0;
+    text-align: center;
+    font-family: "Kharkiv Tone";
+    color: #2d3f4d;
+    background-color: #b6e0f8;
+    box-sizing: border-box;
+}
+
+#hero-section {
+    background-image: url(images/kharkiv-banner.jpg);
+    margin: 0 auto;
+    height: 15em;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 0 0 8px white;
+    padding: 0 5em;
+}
+
+#hero-section > h1 {
+    border-bottom: 3px solid #7b6e7f;
+    padding-bottom: 3px;
+}
+
+#hero-section > h2 {
+    background-color: #83b8d7b7;
+    padding: 17px 5px 15px 5px;
+    margin: 0;
+    font-size: 1.3em;
+}
+
+#activities-section {
+    margin: 0;
+    height: 100%;
+}
+
+#activities {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 2em 5em;
+}
+
+#activities-section > h3 {
+    margin-bottom: 0;
+    padding-top: 25px;
+    font-size: 1.4em;
+}
+
+.activity {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 0;
+    border: 2px solid #7b6e7f;
+    padding: 15px 15px 10px 15px;
+}
+
+.activity > img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.activity > p {
+    font-size: 0.9em;
+}
+
+#guide-section {
+    display: flex;
+    border-width: 2px 5px 5px 2px;
+    border-color: #7b6e7f;
+    border-style: solid;
+    background-color: #83b8d7;
+    margin: 2em auto;
+    width: 30em;
+    padding: 15px 30px;
+}
+
+#guide-img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#guide-img > img {
+    width: 200px;
+    height: 200px;
+    border: 2px dotted #2d3f4d;
+}
+
+#guide-text {
+    padding: 0 20px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#guide-text > h3 {
+    font-size: 1.35em;
+}
+
+#guide-text > p {
+    font-style: italic;
+}
