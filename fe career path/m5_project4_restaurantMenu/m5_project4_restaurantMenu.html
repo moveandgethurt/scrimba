@@ -11,10 +11,32 @@
         <!-- fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Smythe&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200&family=Smythe&display=swap" rel="stylesheet">
     </head>
     <body>
-
+        <div class="container">
+            <header>
+                <img id="banner-img" src="./images/banner.png" alt="banner">
+                <div class="header-text">
+                    <h1>Kate's Diner</h1>
+                    <p>The best burgers and pizzas in town</p>
+                </div>
+            </header>
+            <main>
+                <div class="menu" id="menu">
+                    <div class="item">
+                        <img src="./images/pizza.png" class="item-pic" alt="pizza">
+                        <div class="item-description">
+                            <p class="item-name">Pizza</p>
+                            <p class="item-ingredients">pepperoni, mushroom, mozarella</p>
+                            <p class="item-price">$14</p>
+                        </div>
+                        <button class="increment-btn" id="increment-btn">+</button>
+                    </div>
+                    <img src="./images/divider.png" class="divider" alt="divider">
+                </div>
+            </main>
+        </div>
         <script src="./m5_project4_restaurantMenu.js" type="module"></script>
     </body>
 </html>
