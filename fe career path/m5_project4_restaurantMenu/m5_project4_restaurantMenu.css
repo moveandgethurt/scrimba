@@ -1,4 +1,102 @@
-body {
+html, body {
     margin: 0;
+    padding: 0;
     font-family: 'Smythe', cursive;
+    font-weight: 400;
+    box-sizing: border-box;
 } 
+
+/* layout */
+
+.container {
+    width: 500px;
+    margin: 0 auto;
+    background-color: #F8F8F8;
+}
+
+#banner-img {
+    width: 500px;
+    height: 150px;
+    display: block;
+}
+
+.header-text {
+    display: block;
+    width: 300px;
+    position: absolute;
+    top: 50px;
+    padding-left: 25px;
+    color: whitesmoke;
+}
+
+.item {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 5fr 1fr;
+    padding: 40px 25px;
+}
+
+.item-description {
+    padding: 0 10px;
+}
+
+.divider {
+    width: 450px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* typography */
+
+h1, h2, p, #banner-img {
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    font-weight: 500;
+    line-height: 24px;
+    margin-bottom: 15px;
+    font-size: 40px
+}
+
+p {
+    font-size: 22px;
+}
+
+.item-name {
+    font-weight: 400;
+    font-size: 28px;
+    padding-bottom: 5px;
+}
+
+.item-ingredients {
+    font-weight: 400;
+    font-size: 18px;
+    color: #8B8B8B;
+    padding-bottom: 15px;
+}
+
+.item-price {
+    font-weight: 400;
+    font-size: 20px;
+}
+
+/* buttons */
+
+.increment-btn {
+    width: 45px;
+    height: 45px;
+    border: 1.5px solid #a3a2a2;
+    border-radius: 50%;
+    color:#3C3C3C;
+    font-weight: 200;
+    font-size: 28px;
+    line-height: 75%;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+}
+
+button:hover {
+    cursor: pointer;
+}
