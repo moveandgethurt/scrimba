@@ -23,19 +23,66 @@
                 </div>
             </header>
             <main>
-                <div class="menu" id="menu">
-                    <div class="item">
-                        <img src="./images/pizza.png" class="item-pic" alt="pizza">
-                        <div class="item-description">
-                            <p class="item-name">Pizza</p>
-                            <p class="item-ingredients">pepperoni, mushroom, mozarella</p>
+                <div class="menu" id="menu"></div>
+                <div class="order" id="order">
+                    <p class="order-heading">Your Order</p>
+                    <div class="order-items">
+                        <div class="order-container">
+                            <div class="item-name-btn">
+                                <p class="item-name">Pizza</p>
+                                <button class="remove-btn">remove</button>
+                            </div>
                             <p class="item-price">$14</p>
                         </div>
-                        <button class="increment-btn" id="increment-btn">+</button>
+                        <div class="order-container">
+                            <div class="item-name-btn">
+                                <p class="item-name">Hamburger</p>
+                                <button class="remove-btn">remove</button>
+                            </div>
+                            <p class="item-price">$12</p>
+                        </div>
                     </div>
-                    <img src="./images/divider.png" class="divider" alt="divider">
+                    <img src="./images/divider-black.png" class="divider-black" alt="divider-black">
+                    <div class="order-container total">
+                        <p class="total-heading">Total price:</p>
+                        <p class="total-price">$26</p>
+                    </div>
+                    <button class="complete-btn">Complete order</button>
                 </div>
             </main>
+            <div class="modal" id="modal">
+                <h2>Enter card details</h2>			
+                <form id="card-details">
+                    <input 
+                        type="text" 
+                        name="userName" 
+                        id="userName" 
+                        placeholder="Enter your name" 
+                        aria-label="Full name" 
+                        required
+                    >
+                    <input
+                        type="text" 
+                        name="userCardNumber" 
+                        id="userCardNumber" 
+                        placeholder="Enter your card number" 
+                        aria-label="Card number" 
+                        required
+                    >
+                    <input
+                        type="password"
+                        name="userCVV"
+                        id="userCVV"
+                        placeholder="Enter CVV"
+                        aria-label="Your CVV"
+                        required
+                    >
+                    <button class="modal-btn complete-btn" id="pay-btn" type="submit">Pay</button>
+                </form>
+            </div>
+            <div class="thanks" id="thanks">
+                <p>Thanks, <span id="user-name">Kate</span>! Your order is on its way! :)</p>
+            </div>
         </div>
         <script src="./m5_project4_restaurantMenu.js" type="module"></script>
     </body>
