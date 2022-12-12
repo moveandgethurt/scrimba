@@ -25,34 +25,15 @@
             <main>
                 <div class="menu" id="menu"></div>
                 <div class="order" id="order">
-                    <p class="order-heading">Your Order</p>
-                    <div class="order-items">
-                        <div class="order-container">
-                            <div class="item-name-btn">
-                                <p class="item-name">Pizza</p>
-                                <button class="remove-btn">remove</button>
-                            </div>
-                            <p class="item-price">$14</p>
-                        </div>
-                        <div class="order-container">
-                            <div class="item-name-btn">
-                                <p class="item-name">Hamburger</p>
-                                <button class="remove-btn">remove</button>
-                            </div>
-                            <p class="item-price">$12</p>
-                        </div>
-                    </div>
-                    <img src="./images/divider-black.png" class="divider-black" alt="divider-black">
-                    <div class="order-container total">
-                        <p class="total-heading">Total price:</p>
-                        <p class="total-price">$26</p>
-                    </div>
-                    <button class="complete-btn">Complete order</button>
+                    <p class="order-heading" id="order-heading">Your Order</p>
+                    <div class="order-items" id="order-items-list"></div>
+                    <div class="order-total" id="order-total"></div>
                 </div>
+                <div class="thanks" id="thanks"></div>
             </main>
             <div class="modal" id="modal">
                 <h2>Enter card details</h2>			
-                <form id="card-details">
+                <form id="payment-form">
                     <input 
                         type="text" 
                         name="userName" 
@@ -62,11 +43,15 @@
                         required
                     >
                     <input
-                        type="text" 
+                        type="tel"
+                        inputmode="numeric"
+                        pattern="[0-9\s]{13,19}"
+                        autocomplete="cc-number"
+                        maxlength="19"
                         name="userCardNumber" 
                         id="userCardNumber" 
                         placeholder="Enter your card number" 
-                        aria-label="Card number" 
+                        aria-label="Card number"
                         required
                     >
                     <input
@@ -75,13 +60,11 @@
                         id="userCVV"
                         placeholder="Enter CVV"
                         aria-label="Your CVV"
+                        maxlength="3" 
                         required
                     >
                     <button class="modal-btn complete-btn" id="pay-btn" type="submit">Pay</button>
                 </form>
-            </div>
-            <div class="thanks" id="thanks">
-                <p>Thanks, <span id="user-name">Kate</span>! Your order is on its way! :)</p>
             </div>
         </div>
         <script src="./m5_project4_restaurantMenu.js" type="module"></script>
