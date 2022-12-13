@@ -17,9 +17,9 @@ document.addEventListener('click', function(e){
     else if (e.target.dataset.increment) {
         handleIncrementBtn(e.target.dataset.increment);
     }
-    else if (e.target.dataset.remove) {
-        console.log(e.target.dataset.remove);
-    }
+    // else if (e.target.dataset.remove) {
+    //     handleRemoveBtn(e.target.dataset.remove);
+    // }
 })
 
 // handle btns
@@ -27,21 +27,24 @@ document.addEventListener('click', function(e){
 let orderArray = [];
 
 function handleIncrementBtn(itemUUID){
+    orderHeading.style.display = 'block';
+
+    // render order list
+
     const targetItemObj = menuArray.filter(item => item.uuid === itemUUID)[0];
     orderArray.push(targetItemObj);
     
     let counts = orderArray.reduce((map, targetItemObj) => {map[targetItemObj.name] = (map[targetItemObj.name] || 0)+1; return map}, {} );  
     let orders = [];
-
+    
     orderArray.forEach(function(order){
         let item = `
         <div class="order-container">
             <div class="item-name-btn">
                 <p class="item-name">${order.name} +${counts[order.name]}</p>
-                <button class="remove-btn"
-                data-remove="${order.uuid}">remove</button>
+                <!-- <button class="remove-btn" id="remove-btn" data-remove="${order.uuid}">remove</button> -->
             </div>
-            <p class="item-price">$${order.price}</p>
+            <p class="item-price">$${order.price*counts[order.name]}</p>
         </div>
         `;
         
@@ -49,18 +52,21 @@ function handleIncrementBtn(itemUUID){
             orders.push(item);
         }
     });
-
     orderItemsList.innerHTML = orders.join('');
 
-    console.log(counts)
-    console.log(orderArray)
+    // render total list
 
-    orderHeading.style.display = 'block';
+    let totalSum = 0;
+
+    for (let i = 0; i < orderArray.length; i++) {
+        totalSum += orderArray[i].price;
+    }
+
     orderTotal.innerHTML = `
     <img src="./images/divider-black.png" class="divider-black" alt="divider-black">
     <div class="order-container total">
         <p class="total-heading">Total price:</p>
-        <p class="total-price">$26</p>
+        <p class="total-price">$${totalSum}</p>
     </div>
     <button class="complete-btn" id="complete-btn">Complete order</button>
     `;
@@ -87,6 +93,7 @@ paymentForm.addEventListener('submit', function(e){
 
 function getMenuHtml(menuArray) {
     let menuHtml = ``;
+
     menuArray.forEach(function(item){
         menuHtml += `
         <div class="item">
@@ -103,6 +110,7 @@ function getMenuHtml(menuArray) {
         <img src="./images/divider-gray.png" class="divider-gray" alt="divider-gray">
         `;
     })
+
     return menuHtml;
 }
 
