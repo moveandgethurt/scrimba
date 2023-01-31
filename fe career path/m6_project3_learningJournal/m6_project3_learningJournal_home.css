@@ -26,7 +26,6 @@ p, img {
 
 #header-container {
     padding: 20px 35px;
-    border-bottom: 2px solid #0E0E0E;
 }
 
     /* header-logo */
@@ -71,20 +70,20 @@ p, img {
 #hero-article {
     margin: 0;
     padding: 0;
-    height: 375px;
+    height: 400px;
     width: 100%;
     background-image: url(./images/blog-image-hero.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    position: relative;
+    display: flex;
+    align-items: flex-end;
 }
 
 #hero-article-container {
     color: whitesmoke;
     position: absolute;
-    top: 125px;
-    padding: 0 20px 30px 20px;
+    padding: 0 30px 40px 30px;
 }
 
 #hero-article-date {
@@ -109,12 +108,14 @@ p, img {
 
 #blog-articles-list {
     display: grid;
-    padding: 35px 20px;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-gap: 1.25em;
+    padding: 35px 40px;
 }
 
 .blog-article {
-    width: 440px;
-    margin: 0 auto 50px auto;
+    width: 400px;
+    margin: 0 auto 20px auto;
 }
 
 .blog-image {
