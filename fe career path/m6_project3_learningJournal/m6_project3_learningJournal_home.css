@@ -46,7 +46,7 @@ p, img {
 
     /* header-text */
 
-.header-text a {
+header a {
     font-weight: 600;
     color: #090909;
     font-size: 1rem;
@@ -84,6 +84,16 @@ p, img {
     color: whitesmoke;
     position: absolute;
     padding: 0 30px 40px 30px;
+}
+
+#hero-article-container a {
+    color: whitesmoke;
+    text-decoration: none;
+    
+}
+
+#hero-article-container a:hover {
+    text-decoration: underline;
 }
 
 #hero-article-date {
