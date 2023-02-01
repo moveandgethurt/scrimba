@@ -46,7 +46,7 @@ p, img, h2 {
 
     /* header-text */
 
-.header-text a {
+header a {
     font-weight: 600;
     color: #090909;
     font-size: 1rem;
