@@ -4,7 +4,7 @@ document.getElementById('bored-bot').addEventListener('click', function(){
         .then(data => {
             document.getElementById('idea').textContent = data.activity;
             document.getElementById('title').textContent = '! HappyBot !';
-        document.body.classList.add('happy-body');
-        document.getElementById('bored-bot').classList.add('happy-button');
+            document.body.classList.add('happy-body');
+            document.getElementById('bored-bot').classList.add('happy-button');
         })  
 })
