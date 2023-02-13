@@ -1,0 +1,109 @@
+html,body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: cornsilk;
+}
+
+body {
+    width: 500px;
+    margin: 0 auto;
+}
+
+/* navigation */
+
+nav {
+    box-sizing: inherit;
+    height: 50px;
+    width: 500px;
+    margin: 0 auto;
+    background: rgb(173, 164, 128);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-style: italic;
+    font-weight: 500;
+    text-shadow: 2px 1.5px 3px cornsilk;
+}
+
+/* input area */
+
+form {
+    box-sizing: inherit;
+    height: 325px;
+    width: 100%;
+    padding: 70px 25px 25px;
+    border-left: 2px solid rgb(173, 164, 128);
+    border-right: 2px solid rgb(173, 164, 128);
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 1.125rem;
+    font-weight: 500;
+    display: block;
+}
+
+input {
+    height: 30px;
+}
+
+textarea {
+    height: 75px;
+}
+
+input, textarea {
+    box-sizing: inherit;
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 5px;
+    border: 1px solid rgb(173, 164, 128);
+    background-color: white;
+    font-family: inherit;
+    padding: 7px 0 7px 7px;
+}
+
+button {
+    padding: 7px 0;
+    width: 100%;
+    font-size: 0.9rem;
+    font-weight: bold;
+    font-family: inherit;
+    border: 1px solid rgb(173, 164, 128);
+    background-color: rgb(240, 233, 204);
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(219, 212, 182);
+}
+
+button:active {
+    transform: scale(0.9);
+}
+
+/* blog posts */
+
+#blog-posts {
+    box-sizing: inherit;
+    width: 100%;
+    margin: 0 auto;
+    border: 2px solid rgb(173, 164, 128);
+}
+
+.post-container {
+    padding: 10px 15px;
+    background-color: rgb(255, 250, 230);
+}
+
+.post-container:not(:last-of-type) {
+    border-bottom: 2px solid rgb(173, 164, 128);
+}
+
