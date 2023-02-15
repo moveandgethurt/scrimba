@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Scheme Generator</title>
+    <link rel="stylesheet" href="./m9_project3_colorSchemeGenerator.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="container">
+
+        <div id="selection-container">
+            <input 
+                type="color" 
+                name="seed-color" 
+                id="seed-color" 
+                value="#F55A5A">
+            
+            <select name="color-scheme-selection" id="color-scheme-selection">
+                <option value="monochrome">Monochrome</option>
+                <option value="monochrome-dark">Monochrome-dark</option>
+                <option value="monochrome-light">Monochrome-light</option>
+                <option value="analogic">Analogic</option>
+                <option value="complement">Complement</option>
+                <option value="analogic-complement">Analogic-complement</option>
+                <option value="triad">Triad</option>
+            </select>
+
+            <button id="get-scheme">Get color scheme</button>
+        </div>
+
+        <div id="color-scheme-container">
+            <div id="colors">
+                <div class="color"></div>
+                <div class="color"></div>
+                <div class="color"></div>
+                <div class="color"></div>
+                <div class="color"></div>
+            </div>
+
+            <div id="hex-values">
+                <div class="hex-value"><p>#F55A5A</p></div>
+                <div class="hex-value"><p>#2B283A</p></div>
+                <div class="hex-value"><p>#FBF3AB</p></div>
+                <div class="hex-value"><p>#AAD1B6</p></div>
+                <div class="hex-value"><p>#A626D3</p></div>
+            </div>
+        </div>
+
+    </div>
+        
+    <script src="./m9_project3_colorSchemeGenerator.js"></script>
+</body>
+</html>
