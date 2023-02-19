@@ -10,15 +10,18 @@
 <body>
     <div class="container">
         <div class="upper-container">
-            <button id="new-deck">New Deck</button>
-            <h3 id="remaining">Remaining cards: 52</p>
+            <div class="upper-left">
+                <button id="new-deck">New Deck</button>
+                <h3>Remaining cards: <span id="remaining"></span></p>    
+            </div>
+            <p id="deck-id"></p>
         </div>
         <div class="game container" id="cards">
-            <h1 id="title">War!</h1>
-            <h2 class="side" id="computer">Computer: 0</h2>
+            <h1 id="title">Game of War</h1>
+            <h2 class="side" id="computer">Computer: <span id="computer-score">0</span></h2>
             <div class="card-placeholder" id="card-1"></div>
             <div class="card-placeholder" id="card-2"></div>
-            <h2 class="side" id="me">Me: 0</h2>
+            <h2 class="side" id="me">Me: <span id="my-score">0</span></h2>
         </div>
         <button id="draw-cards">Draw</button>
     </div>
