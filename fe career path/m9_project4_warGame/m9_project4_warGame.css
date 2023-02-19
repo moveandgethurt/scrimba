@@ -27,17 +27,22 @@ h1, h2, h3, p {
 .upper-container {
     height: 35px;
     display: flex;
+    justify-content: space-between;
+}
+
+.upper-left {
+    display: flex;
 }
 
 button#new-deck,
-h3#remaining {
+h3,#deck-id {
     align-self: flex-start;
     font-size: 1.35rem;
     height: 100%;
     padding: 5px 10px;
 }
 
-h3#remaining {
+h3, #deck-id {
     font-weight: 200;
 }
 
@@ -72,4 +77,16 @@ button:hover {
 
 button#draw-cards {
     margin-top: 10px;
+}
+
+button:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+}
+
+@media(max-width: 600px) {
+    button#new-deck,
+    h3,#deck-id {
+        font-size: 1.15rem;
+    }
 }
