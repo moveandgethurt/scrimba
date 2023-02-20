@@ -15,39 +15,35 @@ const myScoreEl = document.getElementById('my-score');
 newDeckBtn.addEventListener('click', newDeck);
 drawCardsBtn.addEventListener('click', drawCards);
 
-function newDeck() {
-    fetch('https://apis.scrimba.com/deckofcards/api/deck/new/shuffle/')
-        .then(res => res.json())
-        .then(data => {
-            deckId = data.deck_id;
-            remainingEl.textContent = `${data.remaining}`;
-            deckIdEL.textContent = `deck id: ${deckId}`
-            titleEl.textContent = 'Game of War';
-            card1score = 0;
-            card2score = 0;
-            computerScoreEl.textContent = card1score;
-            myScoreEl.textContent = card2score;
-            drawCardsBtn.disabled = false;
-        })
+async function newDeck() {
+    const res = await fetch('https://apis.scrimba.com/deckofcards/api/deck/new/shuffle/');
+    const data = await res.json();
+    deckId = data.deck_id;
+    remainingEl.textContent = `${data.remaining}`;
+    deckIdEL.textContent = `deck id: ${deckId}`
+    titleEl.textContent = 'Game of War';
+    card1score = 0;
+    card2score = 0;
+    computerScoreEl.textContent = card1score;
+    myScoreEl.textContent = card2score;
+    drawCardsBtn.disabled = false;
 }
 
-function drawCards() {
+async function drawCards() {
     if (deckId) {
-        fetch(`https://apis.scrimba.com/deckofcards/api/deck/${deckId}/draw/?count=2`)
-            .then(res => res.json())
-            .then(data => {
-                card1el.innerHTML = `<img src="${data.cards[0].image}">`;
-                card2el.innerHTML = `<img src="${data.cards[1].image}">`;
-                titleEl.textContent = getWinner(data.cards[0], data.cards[1]);
-                remainingEl.textContent = `${data.remaining}`;
-                drawCardsBtn.disabled = false;
-                if (data.remaining === 0) {
-                    drawCardsBtn.disabled = true;
-                    titleEl.textContent = card1score > card2score ? 
-                    'Computer wins the game!' : card2score > card1score ? 
-                    'You win the game!' : `It's a complete war!`;
-                } 
-            })
+        const res = await fetch(`https://apis.scrimba.com/deckofcards/api/deck/${deckId}/draw/?count=2`);
+        const data = await res.json();
+        card1el.innerHTML = `<img src="${data.cards[0].image}">`;
+        card2el.innerHTML = `<img src="${data.cards[1].image}">`;
+        titleEl.textContent = getWinner(data.cards[0], data.cards[1]);
+        remainingEl.textContent = `${data.remaining}`;
+        drawCardsBtn.disabled = false;
+        if (data.remaining === 0) {
+            drawCardsBtn.disabled = true;
+            titleEl.textContent = card1score > card2score ? 
+                'Computer wins the game!' : card2score > card1score ? 
+                'You win the game!' : `It's a complete war!`;
+        }
     } else { alert(`Click 'New Deck' first to draw new cards!`) }
 }
 
