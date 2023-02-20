@@ -13,25 +13,10 @@ html, body {
     color: whitesmoke;
 }
 
+/* typography */
+
 h1, h2, h3, p {
     margin: 0;
-}
-
-.container {
-    height: 100vh;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-between;
-}
-
-.upper-container {
-    height: 35px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.upper-left {
-    display: flex;
 }
 
 button#new-deck,
@@ -50,6 +35,38 @@ h1#title {
     text-shadow: 2px 1.5px 5px rgb(0, 0, 0);
 }
 
+/* containers */
+
+.container {
+    height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+}
+
+.upper-container {
+    height: 35px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.upper-left {
+    display: flex;
+}
+
+.game.container {
+    align-items: center;
+}
+
+.card-placeholder, img {
+    height: 165px;
+    width: calc(165px * 5 / 7);
+    border: 1px solid black;
+    border-radius: 7px;
+}
+
+/* buttons */
+
 button {
     font-family: inherit;
     font-size: 1.75rem;
@@ -64,17 +81,6 @@ button:hover {
     background-color: rgb(188, 211, 57);
 }
 
-.game.container {
-    align-items: center;
-}
-
-.card-placeholder, img {
-    height: 165px;
-    width: calc(165px * 5 / 7);
-    border: 1px solid black;
-    border-radius: 7px;
-}
-
 button#draw-cards {
     margin-top: 10px;
 }
@@ -83,6 +89,8 @@ button:disabled {
     opacity: 0.65;
     cursor: not-allowed;
 }
+
+/* media query */
 
 @media(max-width: 600px) {
     button#new-deck,
