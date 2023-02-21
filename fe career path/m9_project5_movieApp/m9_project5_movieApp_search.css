@@ -139,6 +139,16 @@ button#search {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
+    
+    margin-top: 50px;
+}
+
+.start-page-wrap {
+    width: 100%;
+    min-height: 60vh;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
     justify-content: center;
 }
 
@@ -147,7 +157,7 @@ i.fa-film {
     color: #dfdddd;
 }
 
-.main-container > p {
+.start-page-wrap > p {
     font-weight: 500;
     font-size: 1.125rem;
     line-height: 2rem;
@@ -155,4 +165,86 @@ i.fa-film {
     text-align: center;
 
     color: #ccc9c9;
+}
+
+/* movie container */
+
+.movie-container,
+.movie-desc-wrap,
+.title-rating-wrap,
+.runtime-genre-addbtn-wrap,
+#add-movie {
+    display: flex;
+}
+
+.movie-container {
+    width: 450px;
+    height: 150px;
+}
+
+.poster {
+    width: 100px;
+    height: 100%;
+}
+
+.movie-desc-wrap {
+    flex-flow: column nowrap;
+    justify-content: space-around;
+
+    padding: 10px 5px 10px 20px;
+}
+
+.title-rating-wrap {
+    align-items: center;
+    gap: 15px;
+}
+
+.title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 1.25rem;
+    margin: 0;
+}
+
+.fa-star {
+    color: #FEC654;
+}
+
+.fa-star,
+.rating,
+.runtime-genre-addbtn-wrap {
+    font-size: 0.8rem;
+    font-weight: 400;
+    line-height: 1.25rem;
+}
+
+.runtime-genre-addbtn-wrap {
+    align-items: center;
+    justify-content: space-between;
+}
+
+#add-movie {
+    gap: 5px;
+    height: 20px;
+    width: 90px;
+    border: none;
+    background: white;
+    color: inherit;
+    cursor: pointer;
+}
+
+.plot-wrap {
+    width: 100%;
+}
+
+.plot {
+    font-size: 0.95rem;
+    color: #6B7280;
+}
+
+.divider {
+    height: 2.5px;
+    width: 450px;
+    margin: 25px 0;
+    border-top: 2.5px solid #E5E7EB;
 }
