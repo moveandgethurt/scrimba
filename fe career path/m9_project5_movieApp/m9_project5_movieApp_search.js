@@ -9,18 +9,15 @@ searchBtn.addEventListener('click', getMoviesList);
 async function getMoviesList() {
     const res = await fetch(`http://www.omdbapi.com/?apikey=f2a64d41&s=${siteSearchInput.value}&type=movie`);
     const data = await res.json();
-    console.log(data.Search)
     
     if(data.Search) {
         searchResultsImdb = data.Search.map(item => item.imdbID);
-        console.log(searchResultsImdb)
     
         searchResultsImdb.forEach(async function(imdbID) {
             searchResultsObject = [];
     
             const res = await fetch(`http://www.omdbapi.com/?apikey=f2a64d41&i=${imdbID}&plot=short&type=movie`);
             const data = await res.json();
-            console.log(data)
     
             searchResultsObject.push({
                 title: data.Title,
@@ -31,7 +28,6 @@ async function getMoviesList() {
                 poster: data.Poster,
                 imdb: data.imdbID
             });
-            console.log(searchResultsObject)
     
             renderMovies();
         })
@@ -44,6 +40,7 @@ async function getMoviesList() {
 
 function renderMovies() {
     let html = '';
+
     searchResultsObject.forEach(function(movie) {
         html += `
             <div class="movie-container" id=${movie.imdb}>
@@ -74,15 +71,15 @@ function renderMovies() {
             <hr class="divider">
         `;
     })
+
     document.getElementById('main-container').innerHTML = html;
+    
     addToLocalStorage()
 }
 
 function addToLocalStorage() {
     searchResultsObject.forEach(function(movie){
         document.querySelector(`.${movie.imdb}`).addEventListener('click', function(){
-            console.log(searchResultsObject)
-    
             const movieObj = {
                 title: movie.title,
                 rating: movie.rating,
@@ -92,8 +89,6 @@ function addToLocalStorage() {
                 poster: movie.poster,
                 imdb: movie.imdb
             }
-    
-            console.log(movieObj)
     
             localStorage.setItem(`movieObj${movie.imdb}`, JSON.stringify(movieObj));
         
