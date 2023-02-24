@@ -15,7 +15,7 @@ body {
     background-size: cover;
     color: white;
     font-family: 'Courier New', Courier, monospace;
-    text-shadow: 0px 0px 20px #aaaaaa;
+    text-shadow: 0px 0px 20px #222222;
 }
 
 main {
@@ -31,12 +31,39 @@ div#crypto-weather {
     justify-content: space-between;
 }
 
+div#crypto-top {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: 600;
+}
+
+div#crypto-top img {
+    width: 20px;
+    height: 20px;
+}
+
+div#crypto-bottom {
+    display: flex;
+    gap: 10px;
+}
+
+div#crypto-bottom > p {
+    margin: 5px;
+}
+
 h1#time {
     text-align: center;
-    font-size: 3rem;
+    font-size: 5rem;
+    margin: 0;
+}
+
+p#date {
+    margin: 0;
+    font-size: 1.5rem;
+    text-align: center;
 }
 
 p#img-location {
-    font-size: 1.25rem;
     font-weight: 600;
 }
