@@ -15,7 +15,7 @@ body {
     background-size: cover;
     color: white;
     font-family: 'Courier New', Courier, monospace;
-    text-shadow: 0px 0px 20px #222222;
+    text-shadow: 0px 0px 5px black;
 }
 
 main {
@@ -26,10 +26,14 @@ main {
     justify-content: space-between;
 }
 
+/* crypto and weather */
+
 div#crypto-weather {
     display: flex;
     justify-content: space-between;
 }
+
+/* crypto */
 
 div#crypto-top {
     display: flex;
@@ -49,8 +53,40 @@ div#crypto-bottom {
 }
 
 div#crypto-bottom > p {
-    margin: 5px;
+    margin: 0;
 }
+
+/* weather */
+
+div#weather {
+    width: 100px;
+    height: 100px;
+    text-align: end;
+}
+
+div#weather-top {
+    display: flex;
+    justify-content: flex-end;
+    gap: 5px;
+    font-weight: 600;
+}
+
+div#weather-top > img {
+    width: 50px;
+    height: 50px;
+}
+
+div#weather-top > span {
+    line-height: 50px;
+    font-size: 1.5rem;
+}
+
+div#weather > p {
+    margin-top: 0;
+    font-size: 0.9rem;
+}
+
+/* time and date */
 
 h1#time {
     text-align: center;
@@ -64,6 +100,8 @@ p#date {
     text-align: center;
 }
 
-p#img-location {
+/* img author */
+
+p#img-author {
     font-weight: 600;
 }
