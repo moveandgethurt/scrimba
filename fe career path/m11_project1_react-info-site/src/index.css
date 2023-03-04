@@ -1,66 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 html, body {
   margin: 0;
   padding: 0;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: 'Inter', sans-serif;
   position: relative;
   height: 100vh;
   overflow: hidden;
+  background-color: #282d35;
 }
 
 div#root {
   padding: 0;
 }
 
-div.page-container {
+div.container {
   height: 100vh;
+  background-image: url('D:\Kate JS\scrimba\fe career path\m11_project1_react-info-site\src\images\react-icon-large.png');
+  background-repeat: no-repeat;
+  background-position: right 55%;
+  background-size: 175px;
 }
 
 /* header */
 
 header {
   padding: 20px;
-  box-shadow: 1px 2px 3px rgb(206, 205, 205);
+  box-shadow: 1px 2px 3px #21222a;
+  background-color: #21222a;
 }
 
 nav {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
-img {
-  width: 70px;
-}
-
-ul.navbar {
-  padding: 0;
-  width: 250px;
+.nav--logo-container {
   display: flex;
-  list-style: none;
-  justify-content: space-between;
-  font-size: 1.2rem;
+  align-items: center;
 }
 
-ul.navbar > a {
+.nav--icon {
+  width: 50px;
+  height: 50px;
+}
+
+.nav--logo-text {
+  margin-left: 10px;
+  color: #61dafb;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.nav--title {
+  padding: 0;
+  width: 225px;
+  font-size: 1.15rem;
   text-decoration: none;
-  color: inherit;
+  color: #deebf8;
+  font-weight: 400;
 }
 
 /* main */
 
-div.main-container {
-  padding-left: 30px;
-  padding-top: 30px;
+main{
+  color: #ffffff;
+  height: 100%;
+  width: 550px;
+  margin: 0 auto;
 }
 
-h1 {
-  font-size: 3rem;
-  margin-top: 15px;
-  margin-bottom: 15px;
+.main--title {
+  font-size: 2.75rem;
+  margin-top: 75px;
+  margin-bottom: 45px;
+  font-weight: 700;
+  padding-left: 20px;
+  letter-spacing: -0.05em;
 }
 
-ul.main-list > li {
+.main--ul-list {
+  margin: 0 50px;
+}
+
+.main--ul-list li::marker {
+  color: #61dafb;
+  font-size: 1.75rem;
+  line-height: 1rem;
+}
+
+.main--li-item {
+  color: #ffffff;
   font-size: 1.25rem;
-  margin-bottom: 3px;
+  font-weight: 400;
+  line-height: 2rem;
+  margin-bottom: 20px;
 }
 
 /* footer */
@@ -72,5 +111,6 @@ footer {
   width: 100%;
   text-align: center;
   padding: 10px 0;
-  background-color: rgb(206, 206, 206);
+  background-color: #4d545f;
+  color: #deebf8;
 }
