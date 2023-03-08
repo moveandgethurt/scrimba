@@ -62,12 +62,24 @@ nav {
 
 /* card */
 
+.cards {
+  margin-inline: 35px;
+  margin-block: 35px 0;
+  display: flex;
+  gap: 20px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+
 .card--container {
-  height: 365px;
-  width: 190px;
-  margin: 35px 0 0 35px;
+  height: 335px;
+  width: 170px;
   font-size: 0.8rem;
   line-height: 1rem;
+
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
 }
 
 .card--character-img-status {
@@ -84,16 +96,20 @@ nav {
 .card--status {
   width: 65px;
   height: 20px;
-  background-color: #fff;
-  border-radius: 2px;
+  padding: 5px 6.5px 4px 6.5px;
+  
   position: absolute;
   z-index: 1;
   top: 6px;
   left: 6px;
+
   font-size: 0.67rem;
   line-height: 0.7rem;
   font-weight: 400;
-  padding: 5px 6.5px 4px 6.5px;
+  text-align: center;
+
+  background-color: #fff;
+  border-radius: 2px;
   border-radius: 2px;
 }
 
@@ -113,6 +129,11 @@ nav {
   color: #918e9b;
 }
 
+.card--title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .card--rating-country,
 .card--title,
 .card--cost-per-person {
@@ -121,4 +142,5 @@ nav {
 
 .card--cost {
   font-weight: 600;
+  margin-top: auto;
 }
