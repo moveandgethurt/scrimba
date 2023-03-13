@@ -16,7 +16,6 @@ h1, p {
 
 .container {
   max-width: 700px;
-  height: 100vh;
   margin: 0 auto;
   box-shadow: 1px 1px 25px 0px rgba(0,0,0,0.25);
   background-color: whitesmoke;
@@ -58,7 +57,7 @@ h1, p {
 
 /* form */
 
-.form--container {
+main {
   padding: 50px;
 }
 
@@ -100,4 +99,10 @@ h1, p {
   font-weight: 500;
   font-size: 1rem;
   line-height: 1.5rem;
+}
+
+.meme--image {
+  max-width: 100%;
+  display: block;
+  margin: 50px auto 0 auto;
 }
