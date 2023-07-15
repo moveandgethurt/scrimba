@@ -1,116 +1,148 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
-*, *::before, *::after {
+* {
   box-sizing: border-box;
 }
 
-html, body {
+h1, h2, h3, h4, h5, h6, p {
   margin: 0;
-  padding: 0;
+}
+
+body {
+  margin: 0;
   font-family: 'Inter', sans-serif;
-  position: relative;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
   height: 100vh;
-  overflow: hidden;
-  background-color: #282d35;
 }
 
-div#root {
-  padding: 0;
-}
-
-div.container {
-  height: 100vh;
-  background-image: url('D:\Kate JS\scrimba\fe career path\m11_project1_react-info-site\src\images\react-icon-large.png');
-  background-repeat: no-repeat;
-  background-position: right 55%;
-  background-size: 175px;
-}
-
-/* header */
-
-header {
-  padding: 20px;
-  box-shadow: 1px 2px 3px #21222a;
-  background-color: #21222a;
-}
+/* NAV styles */
 
 nav {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  background-color: #ffffff;
+  padding: 30px 25px;
+  height: 60px;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+  z-index: 1;
 }
 
-.nav--logo-container {
+nav.dark {
+  background-color: #21222A;
+}
+
+.nav--logo_icon {
+  width: 30px;
+  margin-right: 10px;
+}
+
+.nav--logo_text {
+  color: #61DAFB;
+  margin-right: auto;
+}
+
+.nav--title {
+  color: #DEEBF8;
+}
+
+.toggler {
   display: flex;
   align-items: center;
 }
 
-.nav--icon {
-  width: 50px;
-  height: 50px;
+.toggler p {
+  font-size: 0.625rem;
+  font-weight: 600;
 }
 
-.nav--logo-text {
-  margin-left: 10px;
-  color: #61dafb;
-  font-size: 1.5rem;
-  font-weight: 700;
+.toggler--slider {
+  width: 25px;
+  height: 13px;
+  background-color: #2B283A;
+  border-radius: 2rem;
+  margin-inline: 7px;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border: 1px solid black;
+  box-sizing: content-box;
 }
 
-.nav--title {
-  padding: 0;
-  width: 225px;
-  font-size: 1.15rem;
-  text-decoration: none;
-  color: #deebf8;
-  font-weight: 400;
+nav.dark .toggler--slider {
+  border-color: white;
+  background-color: #F5F5F5;
 }
 
-/* main */
+.toggler--slider--circle {
+  height: 13px;
+  width: 13px;
+  background-color: white;
+  border-radius: 50%;
+}
 
-main{
-  color: #ffffff;
-  height: 100%;
-  width: 550px;
-  margin: 0 auto;
+nav.dark .toggler--slider--circle {
+  background-color: black;
+}
+
+.toggler--light {
+  color: #2B283A;
+}
+
+nav.dark .toggler--light {
+  color: #918E9B;
+}
+
+.toggler--dark {
+  color: #D5D4D8;
+}
+
+nav.dark .toggler-dark {
+  color: #FFFFFF;
+}
+
+nav.dark .toggler--slider {
+  justify-content: flex-end;
+}
+
+/* MAIN styles */
+main {
+  padding: 57px 27px;
+  background-image: url("../public/images/react-icon-light.png"); 
+  background-repeat: no-repeat;
+  background-position: right center;
+  flex: 1 1 auto;
+  background-color: white;
+  color: #2B283A;
+}
+
+main.dark {
+  background-image: url("../public/images/react-icon-dark.png"); 
+  background-color: #282D35;
+  color: white;    
 }
 
 .main--title {
-  font-size: 2.75rem;
-  margin-top: 75px;
-  margin-bottom: 45px;
-  font-weight: 700;
-  padding-left: 20px;
+  margin: 0;
+  font-size: 39px;
   letter-spacing: -0.05em;
 }
 
-.main--ul-list {
-  margin: 0 50px;
+.main--facts {
+  margin-top: 46px;
+  max-width: 400px;
 }
 
-.main--ul-list li::marker {
-  color: #61dafb;
-  font-size: 1.75rem;
-  line-height: 1rem;
+.main--facts > li {
+  line-height: 19px;
+  padding-block: 10px;
 }
 
-.main--li-item {
-  color: #ffffff;
-  font-size: 1.25rem;
-  font-weight: 400;
-  line-height: 2rem;
-  margin-bottom: 20px;
-}
-
-/* footer */
-
-footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  text-align: center;
-  padding: 10px 0;
-  background-color: #4d545f;
-  color: #deebf8;
+.main--facts > li::marker {
+  font-size: 1.4rem;
+  color: #61DAFB;
 }
